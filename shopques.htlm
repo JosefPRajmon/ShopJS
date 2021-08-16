@@ -1,0 +1,50 @@
+<html lang="cz" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link  rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="creating" class="overlay">
+        <div id="text">
+            <form onsubmit="return false"  method="POST">
+                <input type="text" name="jmeno" placeholder="Celé jméno" /><br />
+                <input type="text"name="adres" placeholder="Adresa" /><br />
+                <input type="email" name="email"  placeholder="Email" /><br />
+                <input type="tel" name="tel" placeholder="Telefoní číslo" /><br />
+
+                <label id="ShopCost" value=""></label>
+                <label class="COST"> </label><br />
+
+                <input type="button" value="Odeslat objednávku" />
+
+
+
+
+
+                <input type="submit" onclick="OverleyOff(`creating`)" value="ZRUSIT TVORBU" />
+            </form>
+        </div>
+    </div>
+    <div id="ShopedBlock">
+        <form onsubmit="return false">
+            <input list="ShopItems" id="ShopedINPUT" placeholder="VYBER PRODUKT"><br />
+            <datalist id="ShopItems">
+            </datalist>
+            <input type="button" value="PŘIDEJ DO KOšÍKU" onclick="AddShopingItem(), Finish_cost()" /><br />
+
+            <input type="button" value="OBJEDNEJ" onclick="OverleyOn(`creating`)" />
+            <div>
+                <label>NÁKUPNÍ KOŠÍK</label>
+                <div id="ShoppingCard">
+
+                </div>
+                <label>Ceslkova cena:  </label><label class="COST"> </label>
+            </div>
+        </form>
+    </div>
+    <div id="#ItemShoped"><label for="ShopedINPUT" id="CostITEM" value="cena"></label></div>
+    <script src="script.js"></script>
+
+</body>
+</html>
